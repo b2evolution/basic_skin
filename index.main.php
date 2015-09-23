@@ -48,8 +48,10 @@ siteskin_init();
 // -------------------------------- END OF HEADER --------------------------------
 
 
-// HTML HEADER INCLUDED HERE
-skin_include( '_html_header.inc.php' );
+// ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
+// If site headers are enabled, they will be included here:
+siteskin_include( '_site_body_header.inc.php' );
+// ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
 	<?php
@@ -67,23 +69,7 @@ skin_include( '_html_header.inc.php' );
 				'item_selected_end' => '</strong>] ',
 			) );
 	?>
-				<?php if ( true /* change to false to hide the blog list */ ) { ?>
-				<?php
-				  // START OF BLOG LIST
-				  skin_widget( array(
-						'widget' => 'colls_list_public',
-				'block_start' => '<div>',
-				'block_end' => '</div>',
-				'block_display_title' => false,
-				'list_start' =>  T_('Select blog:').' ',
-				'list_end' => '',
-				'item_start' => ' [',
-				'item_end' => '] ',
-				'item_selected_start' => ' [<strong>',
-				'item_selected_end' => '</strong>] ',
-					  ) );
-				?>
-				<?php } ?>
+
 
 	<hr>
 	<div align="center">
